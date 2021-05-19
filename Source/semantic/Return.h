@@ -8,4 +8,5 @@ class Return: public Statment {
     Expression * _expr;
   public:
     Return(Expression * expr);
+    virtual void Accept(Visitor* visitor);
 };

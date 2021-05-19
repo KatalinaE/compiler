@@ -5,9 +5,9 @@
 #include "Type.h"
 
 class Variable: public Declaration {
-  private:
+  public:
     Type * _type;
     std::string _name;
-  public:
     Variable(Type * type, std::string name);
+    std::string toString();
 };

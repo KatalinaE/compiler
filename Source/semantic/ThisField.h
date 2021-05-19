@@ -8,4 +8,5 @@ class ThisField: public Expression {
     std::string _name;
   public:
     ThisField(std::string name);
+    virtual void Accept(Visitor* visitor);
 };

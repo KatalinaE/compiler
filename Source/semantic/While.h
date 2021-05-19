@@ -9,4 +9,5 @@ class While: public Statment {
     Statment * _then;
   public:
     While(Expression * cond, Statment * then);
+    virtual void Accept(Visitor* visitor);
 };

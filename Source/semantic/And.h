@@ -7,4 +7,5 @@ class And: public Expression {
     Expression * first, * second;
   public:
     And(Expression * first, Expression * second);
+    virtual void Accept(Visitor* visitor);
 };

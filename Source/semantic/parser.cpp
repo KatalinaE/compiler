@@ -943,7 +943,7 @@ namespace yy {
             {
   case 2:
 #line 117 "semantic/parser.y"
-                                       { yystack_[0].value.as < Classes* > ()->Add(yystack_[1].value.as < Class* > ()); yylhs.value.as < Program* > () = new Program(yystack_[0].value.as < Classes* > (), yystack_[1].value.as < Class* > ()); driver.program = yylhs.value.as < Program* > (); }
+                                           { yystack_[1].value.as < Classes* > ()->Add(yystack_[2].value.as < Class* > ()); yylhs.value.as < Program* > () = new Program(yystack_[1].value.as < Classes* > (), yystack_[2].value.as < Class* > ()); driver.program = yylhs.value.as < Program* > (); }
 #line 948 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
     break;
 
@@ -1180,193 +1180,205 @@ namespace yy {
     break;
 
   case 41:
-#line 179 "semantic/parser.y"
-                  { yylhs.value.as < Arguments* > () = new Arguments(); }
+#line 178 "semantic/parser.y"
+                                                { yylhs.value.as < Expression* > () = new InvocationOf(new This(), yystack_[3].value.as < std::string > (), yystack_[1].value.as < Arguments* > ()); }
 #line 1186 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
     break;
 
   case 42:
 #line 180 "semantic/parser.y"
-                    { yylhs.value.as < Arguments* > () = yystack_[0].value.as < Arguments* > (); }
+                  { yylhs.value.as < Arguments* > () = new Arguments(); }
 #line 1192 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
     break;
 
   case 43:
-#line 182 "semantic/parser.y"
-                    { yylhs.value.as < Arguments* > () = new Arguments(); yylhs.value.as < Arguments* > ()->Add(yystack_[0].value.as < Expression* > ()); }
+#line 181 "semantic/parser.y"
+                    { yylhs.value.as < Arguments* > () = yystack_[0].value.as < Arguments* > (); }
 #line 1198 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
     break;
 
   case 44:
 #line 183 "semantic/parser.y"
-                             { yystack_[2].value.as < Arguments* > ()->Add(yystack_[0].value.as < Expression* > ()); yylhs.value.as < Arguments* > () = yystack_[2].value.as < Arguments* > (); }
+                    { yylhs.value.as < Arguments* > () = new Arguments(); yylhs.value.as < Arguments* > ()->Add(yystack_[0].value.as < Expression* > ()); }
 #line 1204 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
     break;
 
   case 45:
-#line 185 "semantic/parser.y"
-                                          { yylhs.value.as < Expression* > () = new ThisField(yystack_[0].value.as < std::string > ()); }
+#line 184 "semantic/parser.y"
+                             { yystack_[2].value.as < Arguments* > ()->Add(yystack_[0].value.as < Expression* > ()); yylhs.value.as < Arguments* > () = yystack_[2].value.as < Arguments* > (); }
 #line 1210 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
     break;
 
   case 46:
 #line 186 "semantic/parser.y"
-                                           { yylhs.value.as < Expression* > () = new IndexOf(new ThisField(yystack_[3].value.as < std::string > ()), yystack_[1].value.as < Expression* > ()); }
+                                          { yylhs.value.as < Expression* > () = new ThisField(yystack_[0].value.as < std::string > ()); }
 #line 1216 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
     break;
 
   case 47:
-#line 188 "semantic/parser.y"
-                     { yylhs.value.as < Expression* > () = new ByName(yystack_[0].value.as < std::string > ()); }
+#line 187 "semantic/parser.y"
+                                           { yylhs.value.as < Expression* > () = new IndexOf(new ThisField(yystack_[3].value.as < std::string > ()), yystack_[1].value.as < Expression* > ()); }
 #line 1222 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
     break;
 
   case 48:
 #line 189 "semantic/parser.y"
-                                { yylhs.value.as < Expression* > () = new IndexOf(new ByName(yystack_[3].value.as < std::string > ()), yystack_[1].value.as < Expression* > ()); }
+                     { yylhs.value.as < Expression* > () = new ByName(yystack_[0].value.as < std::string > ()); }
 #line 1228 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
     break;
 
   case 49:
 #line 190 "semantic/parser.y"
-                       { yylhs.value.as < Expression* > () = yystack_[0].value.as < Expression* > (); }
+                                { yylhs.value.as < Expression* > () = new IndexOf(new ByName(yystack_[3].value.as < std::string > ()), yystack_[1].value.as < Expression* > ()); }
 #line 1234 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
     break;
 
   case 50:
-#line 197 "semantic/parser.y"
-                     { yylhs.value.as < Expression* > () = new And(yystack_[2].value.as < Expression* > (), yystack_[0].value.as < Expression* > ()); }
+#line 191 "semantic/parser.y"
+                       { yylhs.value.as < Expression* > () = yystack_[0].value.as < Expression* > (); }
 #line 1240 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
     break;
 
   case 51:
-#line 198 "semantic/parser.y"
-                     { yylhs.value.as < Expression* > () = new Or(yystack_[2].value.as < Expression* > (), yystack_[0].value.as < Expression* > ()); }
+#line 194 "semantic/parser.y"
+               { yylhs.value.as < Expression* > () = new Negativ(yystack_[0].value.as < Expression* > ()); }
 #line 1246 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
     break;
 
   case 52:
-#line 199 "semantic/parser.y"
-                    { yylhs.value.as < Expression* > () = new Less(yystack_[2].value.as < Expression* > (), yystack_[0].value.as < Expression* > ()); }
+#line 195 "semantic/parser.y"
+                     { yylhs.value.as < Expression* > () = new And(yystack_[2].value.as < Expression* > (), yystack_[0].value.as < Expression* > ()); }
 #line 1252 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
     break;
 
   case 53:
-#line 200 "semantic/parser.y"
-                    { yylhs.value.as < Expression* > () = new More(yystack_[2].value.as < Expression* > (), yystack_[0].value.as < Expression* > ()); }
+#line 196 "semantic/parser.y"
+                     { yylhs.value.as < Expression* > () = new Or(yystack_[2].value.as < Expression* > (), yystack_[0].value.as < Expression* > ()); }
 #line 1258 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
     break;
 
   case 54:
-#line 201 "semantic/parser.y"
-                     { yylhs.value.as < Expression* > () = new Equel(yystack_[2].value.as < Expression* > (), yystack_[0].value.as < Expression* > ()); }
+#line 197 "semantic/parser.y"
+                    { yylhs.value.as < Expression* > () = new Less(yystack_[2].value.as < Expression* > (), yystack_[0].value.as < Expression* > ()); }
 #line 1264 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
     break;
 
   case 55:
-#line 202 "semantic/parser.y"
-                    { yylhs.value.as < Expression* > () = new Add(yystack_[2].value.as < Expression* > (), yystack_[0].value.as < Expression* > ()); }
+#line 198 "semantic/parser.y"
+                    { yylhs.value.as < Expression* > () = new More(yystack_[2].value.as < Expression* > (), yystack_[0].value.as < Expression* > ()); }
 #line 1270 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
     break;
 
   case 56:
-#line 203 "semantic/parser.y"
-                    { yylhs.value.as < Expression* > () = new Sub(yystack_[2].value.as < Expression* > (), yystack_[0].value.as < Expression* > ()); }
+#line 199 "semantic/parser.y"
+                     { yylhs.value.as < Expression* > () = new Equel(yystack_[2].value.as < Expression* > (), yystack_[0].value.as < Expression* > ()); }
 #line 1276 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
     break;
 
   case 57:
-#line 204 "semantic/parser.y"
-                    { yylhs.value.as < Expression* > () = new Mull(yystack_[2].value.as < Expression* > (), yystack_[0].value.as < Expression* > ()); }
+#line 200 "semantic/parser.y"
+                    { yylhs.value.as < Expression* > () = new Add(yystack_[2].value.as < Expression* > (), yystack_[0].value.as < Expression* > ()); }
 #line 1282 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
     break;
 
   case 58:
-#line 205 "semantic/parser.y"
-                    { yylhs.value.as < Expression* > () = new Div(yystack_[2].value.as < Expression* > (), yystack_[0].value.as < Expression* > ()); }
+#line 201 "semantic/parser.y"
+                    { yylhs.value.as < Expression* > () = new Sub(yystack_[2].value.as < Expression* > (), yystack_[0].value.as < Expression* > ()); }
 #line 1288 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
     break;
 
   case 59:
-#line 206 "semantic/parser.y"
-                    { yylhs.value.as < Expression* > () = new Mod(yystack_[2].value.as < Expression* > (), yystack_[0].value.as < Expression* > ()); }
+#line 202 "semantic/parser.y"
+                    { yylhs.value.as < Expression* > () = new Mull(yystack_[2].value.as < Expression* > (), yystack_[0].value.as < Expression* > ()); }
 #line 1294 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
     break;
 
   case 60:
-#line 207 "semantic/parser.y"
-                        { yylhs.value.as < Expression* > () = new IndexOf(yystack_[3].value.as < Expression* > (), yystack_[1].value.as < Expression* > ()); }
+#line 203 "semantic/parser.y"
+                    { yylhs.value.as < Expression* > () = new Div(yystack_[2].value.as < Expression* > (), yystack_[0].value.as < Expression* > ()); }
 #line 1300 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
     break;
 
   case 61:
-#line 208 "semantic/parser.y"
-                        { yylhs.value.as < Expression* > () = new LengthOf(yystack_[2].value.as < Expression* > ()); }
+#line 204 "semantic/parser.y"
+                    { yylhs.value.as < Expression* > () = new Mod(yystack_[2].value.as < Expression* > (), yystack_[0].value.as < Expression* > ()); }
 #line 1306 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
     break;
 
   case 62:
-#line 209 "semantic/parser.y"
-                                     { yylhs.value.as < Expression* > () = new Alloc(new ArrayType(yystack_[3].value.as < std::string > ()), yystack_[1].value.as < Expression* > ()); }
+#line 205 "semantic/parser.y"
+                        { yylhs.value.as < Expression* > () = new IndexOf(yystack_[3].value.as < Expression* > (), yystack_[1].value.as < Expression* > ()); }
 #line 1312 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
     break;
 
   case 63:
-#line 210 "semantic/parser.y"
-                                { yylhs.value.as < Expression* > () = new Alloc(new SimpleType(yystack_[2].value.as < std::string > ())); }
+#line 206 "semantic/parser.y"
+                        { yylhs.value.as < Expression* > () = new LengthOf(yystack_[2].value.as < Expression* > ()); }
 #line 1318 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
     break;
 
   case 64:
-#line 211 "semantic/parser.y"
-               { yylhs.value.as < Expression* > () = new Not(yystack_[0].value.as < Expression* > ()); }
+#line 207 "semantic/parser.y"
+                                     { yylhs.value.as < Expression* > () = new Alloc(new ArrayType(yystack_[3].value.as < std::string > ()), yystack_[1].value.as < Expression* > ()); }
 #line 1324 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
     break;
 
   case 65:
-#line 212 "semantic/parser.y"
-                   { yylhs.value.as < Expression* > () = yystack_[1].value.as < Expression* > (); }
+#line 208 "semantic/parser.y"
+                                { yylhs.value.as < Expression* > () = new Alloc(new SimpleType(yystack_[2].value.as < std::string > ())); }
 #line 1330 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
     break;
 
   case 66:
-#line 213 "semantic/parser.y"
-                   { yylhs.value.as < Expression* > () = new ByName(yystack_[0].value.as < std::string > ());   }
+#line 209 "semantic/parser.y"
+               { yylhs.value.as < Expression* > () = new Not(yystack_[0].value.as < Expression* > ()); }
 #line 1336 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
     break;
 
   case 67:
-#line 214 "semantic/parser.y"
-               { yylhs.value.as < Expression* > () = new Number(yystack_[0].value.as < int > ()); }
+#line 210 "semantic/parser.y"
+                   { yylhs.value.as < Expression* > () = yystack_[1].value.as < Expression* > (); }
 #line 1342 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
     break;
 
   case 68:
-#line 215 "semantic/parser.y"
-             { yylhs.value.as < Expression* > () = new This(); }
+#line 211 "semantic/parser.y"
+                   { yylhs.value.as < Expression* > () = new ByName(yystack_[0].value.as < std::string > ()); }
 #line 1348 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
     break;
 
   case 69:
-#line 216 "semantic/parser.y"
-             { yylhs.value.as < Expression* > () = new Bool(yystack_[0].value.as < bool > ()); }
+#line 212 "semantic/parser.y"
+               { yylhs.value.as < Expression* > () = new Number(yystack_[0].value.as < int > ()); }
 #line 1354 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
     break;
 
   case 70:
-#line 217 "semantic/parser.y"
-                        { yylhs.value.as < Expression* > () = yystack_[0].value.as < Expression* > (); }
+#line 213 "semantic/parser.y"
+             { yylhs.value.as < Expression* > () = new This(); }
 #line 1360 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
     break;
 
   case 71:
-#line 218 "semantic/parser.y"
-                       { yylhs.value.as < Expression* > () = yystack_[0].value.as < Expression* > (); }
+#line 214 "semantic/parser.y"
+             { yylhs.value.as < Expression* > () = new Bool(yystack_[0].value.as < bool > ()); }
 #line 1366 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
     break;
 
+  case 72:
+#line 215 "semantic/parser.y"
+                        { yylhs.value.as < Expression* > () = yystack_[0].value.as < Expression* > (); }
+#line 1372 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+    break;
 
-#line 1370 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+  case 73:
+#line 216 "semantic/parser.y"
+                       { yylhs.value.as < Expression* > () = yystack_[0].value.as < Expression* > (); }
+#line 1378 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+    break;
+
+
+#line 1382 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
 
             default:
               break;
@@ -1637,189 +1649,194 @@ namespace yy {
   }
 
 
-  const signed char parser::yypact_ninf_ = -126;
+  const short parser::yypact_ninf_ = -131;
 
-  const signed char parser::yytable_ninf_ = -50;
+  const signed char parser::yytable_ninf_ = -51;
 
   const short
   parser::yypact_[] =
   {
-     -23,   -35,  -126,    18,    13,    -9,  -126,     3,    -6,  -126,
-       6,    11,    16,     9,    27,    30,  -126,  -126,    52,   178,
-      54,  -126,  -126,  -126,  -126,   -10,  -126,  -126,    57,    37,
-    -126,  -126,  -126,    51,    38,    60,    71,  -126,    81,  -126,
-    -126,    48,   -10,    -3,    -3,  -126,    80,   -10,    78,    86,
-      -3,    87,    89,    90,  -126,  -126,     1,   103,   104,    91,
-     414,  -126,  -126,  -126,    67,  -126,    72,   102,  -126,  -126,
-    -126,   414,   205,    98,  -126,     2,    79,    -3,   224,    -3,
-      -3,    -3,    -3,    -3,  -126,    -3,    -3,    -3,    -3,    -3,
-      -3,    -3,    -3,    -3,    -3,    -3,   -15,  -126,   -10,   109,
-    -126,  -126,   111,    -3,    99,   243,  -126,   262,   281,   300,
-     319,   338,   177,   177,     7,     7,     7,   425,   425,   425,
-     433,   433,   357,   113,  -126,  -126,  -126,  -126,   376,    -3,
-     110,   112,   154,   154,  -126,  -126,  -126,    -3,   126,  -126,
-     395,  -126,  -126,   101,  -126,   414,   100,   129,  -126,  -126,
-     154,    -3,  -126,  -126,   414
+     -20,   -32,  -131,    16,     2,     5,  -131,     8,  -131,    -6,
+    -131,     6,    12,    18,     3,    28,    13,  -131,  -131,    38,
+      -1,    49,  -131,  -131,  -131,  -131,   -10,  -131,  -131,    46,
+      26,  -131,  -131,  -131,    51,    29,    50,    54,  -131,    59,
+    -131,  -131,   104,   -10,    65,    65,    65,  -131,    57,   -10,
+      55,    61,    65,    66,    67,    69,  -131,  -131,     1,    82,
+      83,    68,   438,  -131,  -131,  -131,    47,  -131,    48,    73,
+    -131,  -131,  -131,   438,   438,   229,   133,  -131,    10,    52,
+      65,   248,    65,    65,    65,    65,    65,  -131,    65,    65,
+      65,    65,    65,    65,    65,    65,    65,    65,    65,   -15,
+    -131,   -10,    84,  -131,  -131,    87,    65,    17,   267,  -131,
+     286,   305,   324,   343,   362,   438,   438,   438,   438,   438,
+     438,   438,   438,   438,   438,   381,    94,  -131,  -131,  -131,
+    -131,   400,    65,    65,    91,    92,   191,   191,  -131,  -131,
+    -131,    65,   162,  -131,   438,    70,    97,   419,  -131,  -131,
+      85,  -131,    98,  -131,    65,  -131,  -131,   191,  -131,   438,
+    -131
   };
 
   const signed char
   parser::yydefact_[] =
   {
-       0,     0,     3,     0,     0,     2,     1,     0,     0,     4,
-       0,     7,     0,     0,     0,     0,     8,     9,     0,     0,
-       0,     6,    24,    25,    26,     0,    27,    23,    22,     0,
-      11,    12,    10,     0,     0,     0,     0,    15,     0,    28,
-      13,     0,    17,     0,     0,    15,     0,     0,    68,     0,
-       0,     0,     0,     0,    69,    67,    66,     0,    71,    70,
-       0,    30,    16,    39,     0,    19,    18,     0,    66,    71,
-      70,    64,     0,     0,     5,     0,     0,     0,     0,     0,
-       0,     0,     0,     0,    38,     0,     0,     0,     0,     0,
-       0,     0,     0,     0,     0,     0,     0,    21,     0,     0,
-      65,    31,     0,     0,    45,     0,    37,     0,     0,     0,
-       0,     0,    56,    55,    57,    58,    59,    52,    53,    54,
-      50,    51,     0,     0,    61,    20,    15,    63,     0,     0,
-       0,     0,     0,     0,    48,    36,    60,    41,     0,    62,
-       0,    29,    35,    32,    34,    43,    42,     0,    14,    46,
-       0,     0,    40,    33,    44
+       0,     0,     3,     0,     0,     0,     1,     0,     2,     0,
+       4,     0,     7,     0,     0,     0,     0,     8,     9,     0,
+       0,     0,     6,    24,    25,    26,     0,    27,    23,    22,
+       0,    11,    12,    10,     0,     0,     0,     0,    15,     0,
+      28,    13,     0,    17,     0,     0,     0,    15,     0,     0,
+      70,     0,     0,     0,     0,     0,    71,    69,    68,     0,
+      73,    72,     0,    30,    16,    39,     0,    19,    18,     0,
+      68,    73,    72,    51,    66,     0,     0,     5,     0,     0,
+       0,     0,     0,     0,     0,     0,     0,    38,     0,     0,
+       0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+      21,     0,     0,    67,    31,     0,     0,    46,     0,    37,
+       0,     0,     0,     0,     0,    58,    57,    59,    60,    61,
+      54,    55,    56,    52,    53,     0,     0,    63,    20,    15,
+      65,     0,    42,     0,     0,     0,     0,     0,    49,    36,
+      62,    42,     0,    64,    44,    43,     0,     0,    29,    35,
+      32,    34,     0,    14,     0,    41,    47,     0,    40,    45,
+      33
   };
 
-  const signed char
+  const short
   parser::yypgoto_[] =
   {
-    -126,  -126,   -41,   -39,   -34,  -126,  -126,  -126,  -125,   -44,
-    -126,   107,   -22,    49,  -126,  -126,   127,  -126,  -126,  -126,
-    -126,  -126,  -126,  -126,  -126
+    -131,  -131,   -42,   -40,   -34,  -131,   -18,  -131,  -130,   -46,
+    -131,    75,   -23,    24,  -131,  -131,   106,  -131,  -131,  -131,
+    -131,  -131,  -131,  -131,  -131
   };
 
   const short
   parser::yydefgoto_[] =
   {
-      -1,    57,    69,    70,    60,   146,   147,    61,    62,    41,
-      27,    28,    29,    65,    66,    67,    63,    31,    32,    19,
-      14,     9,     2,     5,     3
+      -1,    59,    71,    72,    62,   145,   146,    63,    64,    42,
+      28,    29,    30,    67,    68,    69,    65,    32,    33,    20,
+      15,    10,     2,     5,     3
   };
 
   const short
   parser::yytable_[] =
   {
-      58,    73,    59,    34,   -47,     1,     4,   143,   144,    71,
-      72,    43,    44,    22,    23,    24,    78,   102,     6,     8,
-      64,    82,   103,    47,    48,   153,   123,    95,   124,    96,
-       7,    26,    58,    10,    59,    11,    54,    55,    68,    12,
-      13,    15,   -27,   105,    17,   107,   108,   109,   110,   111,
-      16,   112,   113,   114,   115,   116,   117,   118,   119,   120,
-     121,   122,    43,    44,    18,    45,    46,    20,    37,   128,
-      33,    22,    23,    24,    47,    48,    64,    35,    36,    38,
-      49,    39,   138,    50,    51,    52,    53,    54,    55,    56,
-      40,    58,    58,    59,    59,   140,    42,    58,    74,    59,
-      76,    77,    79,   145,    80,    81,    83,   -49,    97,    58,
-      84,    59,    43,    44,    98,    45,   101,   154,    99,   129,
-     104,    22,    23,    24,    47,    48,   126,   127,   137,   141,
-      49,   142,   150,    50,    51,    52,    53,    54,    55,    56,
-      43,    44,   151,    45,   148,   152,    30,   125,     0,    22,
-      23,    24,    47,    48,    75,     0,     0,     0,    49,     0,
-       0,    50,    51,    52,    53,    54,    55,    56,    43,    44,
-       0,    45,     0,     0,     0,     0,     0,    22,    23,    24,
-      47,    48,     0,    87,    88,    89,    49,     0,     0,    50,
-      51,    52,    53,    54,    55,    56,    21,    95,     0,    96,
-       0,    22,    23,    24,     0,     0,     0,     0,    25,    85,
-      86,    87,    88,    89,    90,    91,    92,    93,    94,    26,
-       0,   100,     0,     0,     0,    95,     0,    96,    85,    86,
-      87,    88,    89,    90,    91,    92,    93,    94,     0,     0,
-       0,     0,     0,   106,    95,     0,    96,    85,    86,    87,
-      88,    89,    90,    91,    92,    93,    94,     0,     0,   130,
-       0,     0,     0,    95,     0,    96,    85,    86,    87,    88,
-      89,    90,    91,    92,    93,    94,     0,     0,   131,     0,
-       0,     0,    95,     0,    96,    85,    86,    87,    88,    89,
-      90,    91,    92,    93,    94,     0,     0,   132,     0,     0,
-       0,    95,     0,    96,    85,    86,    87,    88,    89,    90,
-      91,    92,    93,    94,     0,     0,   133,     0,     0,     0,
-      95,     0,    96,    85,    86,    87,    88,    89,    90,    91,
-      92,    93,    94,     0,     0,     0,     0,     0,     0,    95,
-     134,    96,    85,    86,    87,    88,    89,    90,    91,    92,
-      93,    94,     0,     0,     0,     0,     0,   135,    95,     0,
-      96,    85,    86,    87,    88,    89,    90,    91,    92,    93,
-      94,     0,     0,     0,     0,     0,     0,    95,   136,    96,
-      85,    86,    87,    88,    89,    90,    91,    92,    93,    94,
-       0,     0,     0,     0,     0,     0,    95,   139,    96,    85,
-      86,    87,    88,    89,    90,    91,    92,    93,    94,     0,
-       0,     0,     0,     0,     0,    95,   149,    96,    85,    86,
-      87,    88,    89,    90,    91,    92,    93,    94,     0,    85,
-      86,    87,    88,    89,    95,     0,    96,    85,    86,    87,
-      88,    89,    90,    91,    92,    95,     0,    96,     0,     0,
-       0,     0,     0,    95,     0,    96
+      60,    76,    61,    35,   -48,     8,   150,   151,     1,     4,
+      73,    74,    75,    23,    24,    25,     6,    22,    81,     7,
+      66,    85,    23,    24,    25,   105,   126,   160,   127,    26,
+     106,    27,   132,     9,    60,    12,    61,   133,    11,    13,
+      27,    14,   -27,    16,    17,    18,   108,    19,   110,   111,
+     112,   113,   114,    21,   115,   116,   117,   118,   119,   120,
+     121,   122,   123,   124,   125,    34,    36,    37,    38,    44,
+      39,    40,   131,    41,    43,    77,    80,    79,    66,    45,
+      46,    82,    83,   142,    84,    86,   -50,    87,   100,   102,
+     101,    49,    50,   107,    60,    60,    61,    61,   144,   147,
+      60,   129,    61,   130,    56,    57,    70,   144,    44,   141,
+     148,   149,   154,   155,   158,    60,   157,    61,    45,    46,
+     159,    47,    48,   152,    78,   128,    31,    23,    24,    25,
+      49,    50,     0,     0,     0,     0,    51,    44,     0,    52,
+      53,    54,    55,    56,    57,    58,     0,    45,    46,     0,
+      47,   104,     0,     0,     0,     0,    23,    24,    25,    49,
+      50,     0,     0,     0,     0,    51,    44,     0,    52,    53,
+      54,    55,    56,    57,    58,     0,    45,    46,     0,    47,
+     153,     0,     0,     0,     0,    23,    24,    25,    49,    50,
+       0,     0,     0,     0,    51,    44,     0,    52,    53,    54,
+      55,    56,    57,    58,     0,    45,    46,     0,    47,     0,
+       0,     0,     0,     0,    23,    24,    25,    49,    50,     0,
+       0,     0,     0,    51,     0,     0,    52,    53,    54,    55,
+      56,    57,    58,    88,    89,    90,    91,    92,    93,    94,
+      95,    96,    97,     0,     0,   103,     0,     0,     0,    98,
+       0,    99,    88,    89,    90,    91,    92,    93,    94,    95,
+      96,    97,     0,     0,     0,     0,     0,   109,    98,     0,
+      99,    88,    89,    90,    91,    92,    93,    94,    95,    96,
+      97,     0,     0,   134,     0,     0,     0,    98,     0,    99,
+      88,    89,    90,    91,    92,    93,    94,    95,    96,    97,
+       0,     0,   135,     0,     0,     0,    98,     0,    99,    88,
+      89,    90,    91,    92,    93,    94,    95,    96,    97,     0,
+       0,   136,     0,     0,     0,    98,     0,    99,    88,    89,
+      90,    91,    92,    93,    94,    95,    96,    97,     0,     0,
+     137,     0,     0,     0,    98,     0,    99,    88,    89,    90,
+      91,    92,    93,    94,    95,    96,    97,     0,     0,     0,
+       0,     0,     0,    98,   138,    99,    88,    89,    90,    91,
+      92,    93,    94,    95,    96,    97,     0,     0,     0,     0,
+       0,   139,    98,     0,    99,    88,    89,    90,    91,    92,
+      93,    94,    95,    96,    97,     0,     0,     0,     0,     0,
+       0,    98,   140,    99,    88,    89,    90,    91,    92,    93,
+      94,    95,    96,    97,     0,     0,     0,     0,     0,     0,
+      98,   143,    99,    88,    89,    90,    91,    92,    93,    94,
+      95,    96,    97,     0,     0,     0,     0,     0,     0,    98,
+     156,    99,    88,    89,    90,    91,    92,    93,    94,    95,
+      96,    97,     0,     0,     0,     0,     0,     0,    98,     0,
+      99
   };
 
   const short
   parser::yycheck_[] =
   {
-      41,    45,    41,    25,     3,    28,    41,   132,   133,    43,
-      44,    14,    15,    23,    24,    25,    50,    15,     0,    28,
-      42,    20,    20,    26,    27,   150,    41,    20,    43,    22,
-      17,    41,    73,    30,    73,    41,    39,    40,    41,    33,
-      29,    25,    41,    77,    17,    79,    80,    81,    82,    83,
-      41,    85,    86,    87,    88,    89,    90,    91,    92,    93,
-      94,    95,    14,    15,    34,    17,    18,    15,    17,   103,
-      16,    23,    24,    25,    26,    27,    98,    20,    41,    41,
-      32,    21,   126,    35,    36,    37,    38,    39,    40,    41,
-      19,   132,   133,   132,   133,   129,    15,   138,    18,   138,
-      22,    15,    15,   137,    15,    15,     3,     3,    41,   150,
-      19,   150,    14,    15,    42,    17,    18,   151,    16,    20,
-      41,    23,    24,    25,    26,    27,    17,    16,    15,    19,
-      32,    19,    31,    35,    36,    37,    38,    39,    40,    41,
-      14,    15,    42,    17,    18,    16,    19,    98,    -1,    23,
-      24,    25,    26,    27,    47,    -1,    -1,    -1,    32,    -1,
-      -1,    35,    36,    37,    38,    39,    40,    41,    14,    15,
-      -1,    17,    -1,    -1,    -1,    -1,    -1,    23,    24,    25,
-      26,    27,    -1,     6,     7,     8,    32,    -1,    -1,    35,
-      36,    37,    38,    39,    40,    41,    18,    20,    -1,    22,
-      -1,    23,    24,    25,    -1,    -1,    -1,    -1,    30,     4,
-       5,     6,     7,     8,     9,    10,    11,    12,    13,    41,
-      -1,    16,    -1,    -1,    -1,    20,    -1,    22,     4,     5,
-       6,     7,     8,     9,    10,    11,    12,    13,    -1,    -1,
-      -1,    -1,    -1,    19,    20,    -1,    22,     4,     5,     6,
-       7,     8,     9,    10,    11,    12,    13,    -1,    -1,    16,
-      -1,    -1,    -1,    20,    -1,    22,     4,     5,     6,     7,
-       8,     9,    10,    11,    12,    13,    -1,    -1,    16,    -1,
-      -1,    -1,    20,    -1,    22,     4,     5,     6,     7,     8,
-       9,    10,    11,    12,    13,    -1,    -1,    16,    -1,    -1,
-      -1,    20,    -1,    22,     4,     5,     6,     7,     8,     9,
-      10,    11,    12,    13,    -1,    -1,    16,    -1,    -1,    -1,
-      20,    -1,    22,     4,     5,     6,     7,     8,     9,    10,
-      11,    12,    13,    -1,    -1,    -1,    -1,    -1,    -1,    20,
-      21,    22,     4,     5,     6,     7,     8,     9,    10,    11,
+      42,    47,    42,    26,     3,     0,   136,   137,    28,    41,
+      44,    45,    46,    23,    24,    25,     0,    18,    52,    17,
+      43,    20,    23,    24,    25,    15,    41,   157,    43,    30,
+      20,    41,    15,    28,    76,    41,    76,    20,    30,    33,
+      41,    29,    41,    25,    41,    17,    80,    34,    82,    83,
+      84,    85,    86,    15,    88,    89,    90,    91,    92,    93,
+      94,    95,    96,    97,    98,    16,    20,    41,    17,     4,
+      41,    21,   106,    19,    15,    18,    15,    22,   101,    14,
+      15,    15,    15,   129,    15,     3,     3,    19,    41,    16,
+      42,    26,    27,    41,   136,   137,   136,   137,   132,   133,
+     142,    17,   142,    16,    39,    40,    41,   141,     4,    15,
+      19,    19,    42,    16,    16,   157,    31,   157,    14,    15,
+     154,    17,    18,   141,    49,   101,    20,    23,    24,    25,
+      26,    27,    -1,    -1,    -1,    -1,    32,     4,    -1,    35,
+      36,    37,    38,    39,    40,    41,    -1,    14,    15,    -1,
+      17,    18,    -1,    -1,    -1,    -1,    23,    24,    25,    26,
+      27,    -1,    -1,    -1,    -1,    32,     4,    -1,    35,    36,
+      37,    38,    39,    40,    41,    -1,    14,    15,    -1,    17,
+      18,    -1,    -1,    -1,    -1,    23,    24,    25,    26,    27,
+      -1,    -1,    -1,    -1,    32,     4,    -1,    35,    36,    37,
+      38,    39,    40,    41,    -1,    14,    15,    -1,    17,    -1,
+      -1,    -1,    -1,    -1,    23,    24,    25,    26,    27,    -1,
+      -1,    -1,    -1,    32,    -1,    -1,    35,    36,    37,    38,
+      39,    40,    41,     4,     5,     6,     7,     8,     9,    10,
+      11,    12,    13,    -1,    -1,    16,    -1,    -1,    -1,    20,
+      -1,    22,     4,     5,     6,     7,     8,     9,    10,    11,
       12,    13,    -1,    -1,    -1,    -1,    -1,    19,    20,    -1,
       22,     4,     5,     6,     7,     8,     9,    10,    11,    12,
-      13,    -1,    -1,    -1,    -1,    -1,    -1,    20,    21,    22,
+      13,    -1,    -1,    16,    -1,    -1,    -1,    20,    -1,    22,
        4,     5,     6,     7,     8,     9,    10,    11,    12,    13,
-      -1,    -1,    -1,    -1,    -1,    -1,    20,    21,    22,     4,
+      -1,    -1,    16,    -1,    -1,    -1,    20,    -1,    22,     4,
        5,     6,     7,     8,     9,    10,    11,    12,    13,    -1,
-      -1,    -1,    -1,    -1,    -1,    20,    21,    22,     4,     5,
-       6,     7,     8,     9,    10,    11,    12,    13,    -1,     4,
-       5,     6,     7,     8,    20,    -1,    22,     4,     5,     6,
-       7,     8,     9,    10,    11,    20,    -1,    22,    -1,    -1,
-      -1,    -1,    -1,    20,    -1,    22
+      -1,    16,    -1,    -1,    -1,    20,    -1,    22,     4,     5,
+       6,     7,     8,     9,    10,    11,    12,    13,    -1,    -1,
+      16,    -1,    -1,    -1,    20,    -1,    22,     4,     5,     6,
+       7,     8,     9,    10,    11,    12,    13,    -1,    -1,    -1,
+      -1,    -1,    -1,    20,    21,    22,     4,     5,     6,     7,
+       8,     9,    10,    11,    12,    13,    -1,    -1,    -1,    -1,
+      -1,    19,    20,    -1,    22,     4,     5,     6,     7,     8,
+       9,    10,    11,    12,    13,    -1,    -1,    -1,    -1,    -1,
+      -1,    20,    21,    22,     4,     5,     6,     7,     8,     9,
+      10,    11,    12,    13,    -1,    -1,    -1,    -1,    -1,    -1,
+      20,    21,    22,     4,     5,     6,     7,     8,     9,    10,
+      11,    12,    13,    -1,    -1,    -1,    -1,    -1,    -1,    20,
+      21,    22,     4,     5,     6,     7,     8,     9,    10,    11,
+      12,    13,    -1,    -1,    -1,    -1,    -1,    -1,    20,    -1,
+      22
   };
 
   const signed char
   parser::yystos_[] =
   {
-       0,    28,    66,    68,    41,    67,     0,    17,    28,    65,
-      30,    41,    33,    29,    64,    25,    41,    17,    34,    63,
-      15,    18,    23,    24,    25,    30,    41,    54,    55,    56,
-      60,    61,    62,    16,    56,    20,    41,    17,    41,    21,
-      19,    53,    15,    14,    15,    17,    18,    26,    27,    32,
-      35,    36,    37,    38,    39,    40,    41,    45,    46,    47,
-      48,    51,    52,    60,    56,    57,    58,    59,    41,    46,
-      47,    48,    48,    53,    18,    55,    22,    15,    48,    15,
-      15,    15,    20,     3,    19,     4,     5,     6,     7,     8,
-       9,    10,    11,    12,    13,    20,    22,    41,    42,    16,
-      16,    18,    15,    20,    41,    48,    19,    48,    48,    48,
+       0,    28,    66,    68,    41,    67,     0,    17,     0,    28,
+      65,    30,    41,    33,    29,    64,    25,    41,    17,    34,
+      63,    15,    18,    23,    24,    25,    30,    41,    54,    55,
+      56,    60,    61,    62,    16,    56,    20,    41,    17,    41,
+      21,    19,    53,    15,     4,    14,    15,    17,    18,    26,
+      27,    32,    35,    36,    37,    38,    39,    40,    41,    45,
+      46,    47,    48,    51,    52,    60,    56,    57,    58,    59,
+      41,    46,    47,    48,    48,    48,    53,    18,    55,    22,
+      15,    48,    15,    15,    15,    20,     3,    19,     4,     5,
+       6,     7,     8,     9,    10,    11,    12,    13,    20,    22,
+      41,    42,    16,    16,    18,    15,    20,    41,    48,    19,
       48,    48,    48,    48,    48,    48,    48,    48,    48,    48,
-      48,    48,    48,    41,    43,    57,    17,    16,    48,    20,
-      16,    16,    16,    16,    21,    19,    21,    15,    53,    21,
-      48,    19,    19,    52,    52,    48,    49,    50,    18,    21,
-      31,    42,    16,    52,    48
+      48,    48,    48,    48,    48,    48,    41,    43,    57,    17,
+      16,    48,    15,    20,    16,    16,    16,    16,    21,    19,
+      21,    15,    53,    21,    48,    49,    50,    48,    19,    19,
+      52,    52,    50,    18,    42,    16,    21,    31,    16,    48,
+      52
   };
 
   const signed char
@@ -1829,23 +1846,23 @@ namespace yy {
       63,    62,    62,    60,    61,    53,    53,    59,    59,    58,
       58,    57,    56,    56,    55,    55,    55,    55,    54,    52,
       52,    52,    52,    52,    52,    52,    52,    52,    52,    51,
-      47,    50,    50,    49,    49,    46,    46,    45,    45,    45,
+      47,    47,    50,    50,    49,    49,    46,    46,    45,    45,
+      45,    48,    48,    48,    48,    48,    48,    48,    48,    48,
       48,    48,    48,    48,    48,    48,    48,    48,    48,    48,
-      48,    48,    48,    48,    48,    48,    48,    48,    48,    48,
-      48,    48
+      48,    48,    48,    48
   };
 
   const signed char
   parser::yyr2_[] =
   {
-       0,     2,     2,     0,     2,    13,     6,     0,     2,     0,
+       0,     2,     3,     0,     2,    13,     6,     0,     2,     0,
        2,     1,     1,     3,     9,     0,     2,     0,     1,     1,
        3,     2,     1,     1,     1,     1,     1,     1,     3,     5,
        1,     3,     5,     7,     5,     5,     4,     3,     2,     1,
-       6,     0,     1,     1,     3,     3,     6,     1,     4,     1,
-       3,     3,     3,     3,     3,     3,     3,     3,     3,     3,
-       4,     3,     5,     4,     2,     3,     1,     1,     1,     1,
-       1,     1
+       6,     6,     0,     1,     1,     3,     3,     6,     1,     4,
+       1,     2,     3,     3,     3,     3,     3,     3,     3,     3,
+       3,     3,     4,     3,     5,     4,     2,     3,     1,     1,
+       1,     1,     1,     1
   };
 
 
@@ -1879,10 +1896,10 @@ namespace yy {
      134,   136,   137,   139,   141,   143,   144,   146,   147,   149,
      150,   152,   154,   155,   157,   158,   159,   160,   162,   164,
      165,   166,   167,   168,   169,   170,   171,   172,   173,   175,
-     177,   179,   180,   182,   183,   185,   186,   188,   189,   190,
-     197,   198,   199,   200,   201,   202,   203,   204,   205,   206,
-     207,   208,   209,   210,   211,   212,   213,   214,   215,   216,
-     217,   218
+     177,   178,   180,   181,   183,   184,   186,   187,   189,   190,
+     191,   194,   195,   196,   197,   198,   199,   200,   201,   202,
+     203,   204,   205,   206,   207,   208,   209,   210,   211,   212,
+     213,   214,   215,   216
   };
 
   // Print the state stack on the debug stream.
@@ -1916,9 +1933,9 @@ namespace yy {
 
 
 } // yy
-#line 1920 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+#line 1937 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
 
-#line 220 "semantic/parser.y"
+#line 218 "semantic/parser.y"
 
 
 void

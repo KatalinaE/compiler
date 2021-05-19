@@ -7,4 +7,5 @@ class Bool: public Expression {
     bool _value;
   public:
     Bool(bool value);
+    virtual void Accept(Visitor* visitor);
 };

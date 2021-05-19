@@ -8,4 +8,5 @@ class Println: public Statment {
     Expression * _expr;
   public:
     Println(Expression * expr);
+    virtual void Accept(Visitor* visitor);
 };

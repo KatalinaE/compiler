@@ -7,4 +7,5 @@ class Number: public Expression {
     int _value;
   public:
     Number(int value);
+    virtual void Accept(Visitor* visitor);
 };

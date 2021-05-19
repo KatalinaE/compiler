@@ -9,4 +9,5 @@ class If: public Statment {
     Statment * _then, * _ifelse;
   public:
     If(Expression * cond, Statment * then, Statment * ifelse = 0);
+    virtual void Accept(Visitor* visitor);
 };

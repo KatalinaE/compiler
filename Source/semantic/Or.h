@@ -7,4 +7,5 @@ class Or: public Expression {
     Expression * first, * second;
   public:
     Or(Expression * first, Expression * second);
+    virtual void Accept(Visitor* visitor);
 };

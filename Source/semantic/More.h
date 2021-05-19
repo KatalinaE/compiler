@@ -7,4 +7,5 @@ class More: public Expression {
     Expression * first, * second;
   public:
     More(Expression * first, Expression * second);
+    virtual void Accept(Visitor* visitor);
 };

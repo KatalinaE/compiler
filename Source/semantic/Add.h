@@ -7,4 +7,5 @@ class Add: public Expression {
     Expression * first, * second;
   public:
     Add(Expression * first, Expression * second);
+    virtual void Accept(Visitor* visitor);
 };

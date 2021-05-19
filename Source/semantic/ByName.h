@@ -8,4 +8,5 @@ class ByName: public Expression {
     std::string _name;
   public:
     ByName(std::string name);
+    virtual void Accept(Visitor* visitor);
 };

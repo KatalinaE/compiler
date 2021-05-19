@@ -7,4 +7,5 @@ class Less: public Expression {
     Expression * first, * second;
   public:
     Less(Expression * first, Expression * second);
+    virtual void Accept(Visitor* visitor);
 };

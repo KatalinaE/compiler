@@ -8,4 +8,5 @@ class ExpressionStatment: public Statment {
     Expression * _expr;
   public:
     ExpressionStatment(Expression * expr);
+    virtual void Accept(Visitor* visitor);
 };

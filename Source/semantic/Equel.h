@@ -7,4 +7,5 @@ class Equel: public Expression {
     Expression * first, * second;
   public:
     Equel(Expression * first, Expression * second);
+    virtual void Accept(Visitor* visitor);
 };

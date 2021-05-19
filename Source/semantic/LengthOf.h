@@ -7,4 +7,5 @@ class LengthOf: public Expression {
     Expression * _expr;
   public:
     LengthOf(Expression * expr);
+    virtual void Accept(Visitor* visitor);
 };

@@ -7,4 +7,5 @@ class Mod: public Expression {
     Expression * first, * second;
   public:
     Mod(Expression * first, Expression * second);
+    virtual void Accept(Visitor* visitor);
 };

@@ -7,4 +7,5 @@ class IndexOf: public Expression {
     Expression * _obj, * _index;
   public:
     IndexOf(Expression * obj, Expression * index);
+    virtual void Accept(Visitor* visitor);
 };

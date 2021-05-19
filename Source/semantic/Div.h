@@ -7,4 +7,5 @@ class Div: public Expression {
     Expression * first, * second;
   public:
     Div(Expression * first, Expression * second);
+    virtual void Accept(Visitor* visitor);
 };

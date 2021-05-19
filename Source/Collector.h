@@ -4,9 +4,8 @@
 
 template<typename T>
 class Collector {
-  private:
-    std::vector<T> store;
   public:
+    std::vector<T> store;
     Collector() {}
     Collector(const T& obj)
     {

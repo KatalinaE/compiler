@@ -9,4 +9,5 @@ class Alloc: public Expression {
     Expression * _size;
   public:
     Alloc(Type * type, Expression * size = 0);
+    virtual void Accept(Visitor* visitor);
 };
