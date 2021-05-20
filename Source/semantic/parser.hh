@@ -32,7 +32,7 @@
 
 
 /**
- ** \file /media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.hh
+ ** \file /home/ekaterina/Documents/test/compiler/Source/semantic/parser.hh
  ** Define the yy::parser class.
  */
 
@@ -41,8 +41,8 @@
 // Undocumented macros, especially those whose name start with YY_,
 // are private implementation details.  Do not rely on them.
 
-#ifndef YY_YY_MEDIA_TTCUX_DATA_COMPILER_MINI_JAVA_SOURCE_SEMANTIC_PARSER_HH_INCLUDED
-# define YY_YY_MEDIA_TTCUX_DATA_COMPILER_MINI_JAVA_SOURCE_SEMANTIC_PARSER_HH_INCLUDED
+#ifndef YY_YY_HOME_EKATERINA_DOCUMENTS_TEST_COMPILER_SOURCE_SEMANTIC_PARSER_HH_INCLUDED
+# define YY_YY_HOME_EKATERINA_DOCUMENTS_TEST_COMPILER_SOURCE_SEMANTIC_PARSER_HH_INCLUDED
 // "%code requires" blocks.
 #line 9 "semantic/parser.y"
 
@@ -53,7 +53,7 @@
     #include "declarations.h"
     #include "include.h"
 
-#line 57 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.hh"
+#line 57 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.hh"
 
 # include <cassert>
 # include <cstdlib> // std::abort
@@ -187,7 +187,7 @@
 #endif
 
 namespace yy {
-#line 191 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.hh"
+#line 191 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.hh"
 
 
 
@@ -2352,10 +2352,10 @@ switch (yytype)
   }
 
 } // yy
-#line 2356 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.hh"
+#line 2356 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.hh"
 
 
 
 
 
-#endif // !YY_YY_MEDIA_TTCUX_DATA_COMPILER_MINI_JAVA_SOURCE_SEMANTIC_PARSER_HH_INCLUDED
+#endif // !YY_YY_HOME_EKATERINA_DOCUMENTS_TEST_COMPILER_SOURCE_SEMANTIC_PARSER_HH_INCLUDED

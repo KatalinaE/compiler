@@ -31,12 +31,12 @@
 // version 2.2 of Bison.
 
 /**
- ** \file /media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/location.hh
+ ** \file /home/ekaterina/Documents/test/compiler/Source/semantic/location.hh
  ** Define the yy::location class.
  */
 
-#ifndef YY_YY_MEDIA_TTCUX_DATA_COMPILER_MINI_JAVA_SOURCE_SEMANTIC_LOCATION_HH_INCLUDED
-# define YY_YY_MEDIA_TTCUX_DATA_COMPILER_MINI_JAVA_SOURCE_SEMANTIC_LOCATION_HH_INCLUDED
+#ifndef YY_YY_HOME_EKATERINA_DOCUMENTS_TEST_COMPILER_SOURCE_SEMANTIC_LOCATION_HH_INCLUDED
+# define YY_YY_HOME_EKATERINA_DOCUMENTS_TEST_COMPILER_SOURCE_SEMANTIC_LOCATION_HH_INCLUDED
 
 # include <iostream>
 # include <string>
@@ -54,7 +54,7 @@
 # endif
 
 namespace yy {
-#line 58 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/location.hh"
+#line 58 "/home/ekaterina/Documents/test/compiler/Source/semantic/location.hh"
 
   /// A point in a source file.
   class position
@@ -327,6 +327,6 @@ namespace yy {
   }
 
 } // yy
-#line 331 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/location.hh"
+#line 331 "/home/ekaterina/Documents/test/compiler/Source/semantic/location.hh"
 
-#endif // !YY_YY_MEDIA_TTCUX_DATA_COMPILER_MINI_JAVA_SOURCE_SEMANTIC_LOCATION_HH_INCLUDED
+#endif // !YY_YY_HOME_EKATERINA_DOCUMENTS_TEST_COMPILER_SOURCE_SEMANTIC_LOCATION_HH_INCLUDED

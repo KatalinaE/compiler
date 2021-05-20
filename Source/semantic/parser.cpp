@@ -50,7 +50,7 @@
         return scanner.ScanToken();
     }
 
-#line 54 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+#line 54 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
 
 
 #ifndef YY_
@@ -141,7 +141,7 @@
 #define YYRECOVERING()  (!!yyerrstatus_)
 
 namespace yy {
-#line 145 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+#line 145 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
 
 
   /* Return YYSTR after stripping away unnecessary quotes and
@@ -944,19 +944,19 @@ namespace yy {
   case 2:
 #line 117 "semantic/parser.y"
                                            { yystack_[1].value.as < Classes* > ()->Add(yystack_[2].value.as < Class* > ()); yylhs.value.as < Program* > () = new Program(yystack_[1].value.as < Classes* > (), yystack_[2].value.as < Class* > ()); driver.program = yylhs.value.as < Program* > (); }
-#line 948 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+#line 948 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
     break;
 
   case 3:
 #line 119 "semantic/parser.y"
                            { yylhs.value.as < Classes* > () = new Classes(); }
-#line 954 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+#line 954 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
     break;
 
   case 4:
 #line 120 "semantic/parser.y"
                                            { yystack_[1].value.as < Classes* > ()->Add(yystack_[0].value.as < Class* > ()); yylhs.value.as < Classes* > () = yystack_[1].value.as < Classes* > (); }
-#line 960 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+#line 960 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
     break;
 
   case 5:
@@ -966,419 +966,419 @@ namespace yy {
         tmp->Add(new Method("main", new SimpleType("void"), new Formals(), yystack_[2].value.as < Statments* > ()));
         yylhs.value.as < Class* > () = new Class(yystack_[11].value.as < std::string > (), new Extends(), tmp);
     }
-#line 970 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+#line 970 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
     break;
 
   case 6:
 #line 128 "semantic/parser.y"
                                                                      { yylhs.value.as < Class* > () = new Class(yystack_[4].value.as < std::string > (), yystack_[3].value.as < Extends* > (), yystack_[1].value.as < Declarations* > ()); }
-#line 976 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+#line 976 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
     break;
 
   case 7:
 #line 130 "semantic/parser.y"
                 { yylhs.value.as < Extends* > () = new Extends(); }
-#line 982 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+#line 982 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
     break;
 
   case 8:
 #line 131 "semantic/parser.y"
                              { yylhs.value.as < Extends* > () = new Extends(yystack_[0].value.as < std::string > ()); }
-#line 988 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+#line 988 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
     break;
 
   case 9:
 #line 133 "semantic/parser.y"
                      { yylhs.value.as < Declarations* > () = new Declarations(); }
-#line 994 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+#line 994 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
     break;
 
   case 10:
 #line 134 "semantic/parser.y"
                                { yystack_[1].value.as < Declarations* > ()->Add(yystack_[0].value.as < Declaration* > ()); yylhs.value.as < Declarations* > () = yystack_[1].value.as < Declarations* > (); }
-#line 1000 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+#line 1000 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
     break;
 
   case 11:
 #line 136 "semantic/parser.y"
                              { yylhs.value.as < Declaration* > () = yystack_[0].value.as < Declaration* > (); }
-#line 1006 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+#line 1006 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
     break;
 
   case 12:
 #line 137 "semantic/parser.y"
                          { yylhs.value.as < Declaration* > () = yystack_[0].value.as < Declaration* > (); }
-#line 1012 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+#line 1012 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
     break;
 
   case 13:
 #line 139 "semantic/parser.y"
                                        { yylhs.value.as < Declaration* > () = new Variable(yystack_[2].value.as < Type* > (), yystack_[1].value.as < std::string > ()); }
-#line 1018 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+#line 1018 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
     break;
 
   case 14:
 #line 141 "semantic/parser.y"
                                                                                  { yylhs.value.as < Declaration* > () = new Method(yystack_[6].value.as < std::string > (), yystack_[7].value.as < Type* > (), yystack_[4].value.as < Formals* > (), yystack_[1].value.as < Statments* > ()); }
-#line 1024 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+#line 1024 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
     break;
 
   case 15:
 #line 143 "semantic/parser.y"
                   { yylhs.value.as < Statments* > () = new Statments(); }
-#line 1030 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+#line 1030 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
     break;
 
   case 16:
 #line 144 "semantic/parser.y"
                          { yystack_[1].value.as < Statments* > ()->Add(yystack_[0].value.as < Statment* > ()); yylhs.value.as < Statments* > () = yystack_[1].value.as < Statments* > (); }
-#line 1036 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+#line 1036 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
     break;
 
   case 17:
 #line 146 "semantic/parser.y"
                 { yylhs.value.as < Formals* > () = new Formals(); }
-#line 1042 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+#line 1042 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
     break;
 
   case 18:
 #line 147 "semantic/parser.y"
                   { yylhs.value.as < Formals* > () = yystack_[0].value.as < Formals* > (); }
-#line 1048 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+#line 1048 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
     break;
 
   case 19:
 #line 149 "semantic/parser.y"
                     { yylhs.value.as < Formals* > () = new Formals(); yylhs.value.as < Formals* > ()->Add(yystack_[0].value.as < Formal* > ()); }
-#line 1054 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+#line 1054 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
     break;
 
   case 20:
 #line 150 "semantic/parser.y"
                              { yystack_[2].value.as < Formals* > ()->Add(yystack_[0].value.as < Formal* > ()); yylhs.value.as < Formals* > () = yystack_[2].value.as < Formals* > (); }
-#line 1060 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+#line 1060 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
     break;
 
   case 21:
 #line 152 "semantic/parser.y"
                           { yylhs.value.as < Formal* > () = new Formal(yystack_[1].value.as < Type* > (), yystack_[0].value.as < std::string > ()); }
-#line 1066 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+#line 1066 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
     break;
 
   case 22:
 #line 154 "semantic/parser.y"
                   { yylhs.value.as < Type* > () = new SimpleType(yystack_[0].value.as < std::string > ()); }
-#line 1072 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+#line 1072 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
     break;
 
   case 23:
 #line 155 "semantic/parser.y"
                  { yylhs.value.as < Type* > () = new ArrayType(yystack_[0].value.as < std::string > ()); }
-#line 1078 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+#line 1078 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
     break;
 
   case 24:
 #line 157 "semantic/parser.y"
                    { yylhs.value.as < std::string > () = "int"; }
-#line 1084 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+#line 1084 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
     break;
 
   case 25:
 #line 158 "semantic/parser.y"
                 { yylhs.value.as < std::string > () = "boolean"; }
-#line 1090 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+#line 1090 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
     break;
 
   case 26:
 #line 159 "semantic/parser.y"
              { yylhs.value.as < std::string > () = "void"; }
-#line 1096 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+#line 1096 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
     break;
 
   case 27:
 #line 160 "semantic/parser.y"
                    { yylhs.value.as < std::string > () = yystack_[0].value.as < std::string > (); }
-#line 1102 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+#line 1102 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
     break;
 
   case 28:
 #line 162 "semantic/parser.y"
                                 { yylhs.value.as < std::string > () = yystack_[2].value.as < std::string > (); }
-#line 1108 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+#line 1108 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
     break;
 
   case 29:
 #line 164 "semantic/parser.y"
                                     { yylhs.value.as < Statment* > () = new Assert(yystack_[2].value.as < Expression* > ()); }
-#line 1114 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+#line 1114 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
     break;
 
   case 30:
 #line 165 "semantic/parser.y"
                             { yylhs.value.as < Statment* > () = yystack_[0].value.as < Statment* > (); }
-#line 1120 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+#line 1120 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
     break;
 
   case 31:
 #line 166 "semantic/parser.y"
                         { yylhs.value.as < Statment* > () = yystack_[1].value.as < Statments* > (); }
-#line 1126 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+#line 1126 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
     break;
 
   case 32:
 #line 167 "semantic/parser.y"
                                  { yylhs.value.as < Statment* > () = new If(yystack_[2].value.as < Expression* > (), yystack_[0].value.as < Statment* > ()); }
-#line 1132 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+#line 1132 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
     break;
 
   case 33:
 #line 168 "semantic/parser.y"
                                                  { yylhs.value.as < Statment* > () = new If(yystack_[4].value.as < Expression* > (), yystack_[2].value.as < Statment* > (), yystack_[0].value.as < Statment* > ()); }
-#line 1138 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+#line 1138 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
     break;
 
   case 34:
 #line 169 "semantic/parser.y"
                                     { yylhs.value.as < Statment* > () = new While(yystack_[2].value.as < Expression* > (), yystack_[0].value.as < Statment* > ()); }
-#line 1144 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+#line 1144 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
     break;
 
   case 35:
 #line 170 "semantic/parser.y"
                                             { yylhs.value.as < Statment* > () = new Println(yystack_[2].value.as < Expression* > ()); }
-#line 1150 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+#line 1150 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
     break;
 
   case 36:
 #line 171 "semantic/parser.y"
                           { yylhs.value.as < Statment* > () = new Move(yystack_[3].value.as < Expression* > (), yystack_[1].value.as < Expression* > ()); }
-#line 1156 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+#line 1156 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
     break;
 
   case 37:
 #line 172 "semantic/parser.y"
                         { yylhs.value.as < Statment* > () = new Return(yystack_[1].value.as < Expression* > ()); }
-#line 1162 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+#line 1162 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
     break;
 
   case 38:
 #line 173 "semantic/parser.y"
                             { yylhs.value.as < Statment* > () = new ExpressionStatment(yystack_[1].value.as < Expression* > ()); }
-#line 1168 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+#line 1168 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
     break;
 
   case 39:
 #line 175 "semantic/parser.y"
                                        { yylhs.value.as < Statment* > () = new LocalVariable(yystack_[0].value.as < Declaration* > ()); }
-#line 1174 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+#line 1174 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
     break;
 
   case 40:
 #line 177 "semantic/parser.y"
                                                            { yylhs.value.as < Expression* > () = new InvocationOf(yystack_[5].value.as < Expression* > (), yystack_[3].value.as < std::string > (), yystack_[1].value.as < Arguments* > ()); }
-#line 1180 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+#line 1180 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
     break;
 
   case 41:
 #line 178 "semantic/parser.y"
                                                 { yylhs.value.as < Expression* > () = new InvocationOf(new This(), yystack_[3].value.as < std::string > (), yystack_[1].value.as < Arguments* > ()); }
-#line 1186 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+#line 1186 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
     break;
 
   case 42:
 #line 180 "semantic/parser.y"
                   { yylhs.value.as < Arguments* > () = new Arguments(); }
-#line 1192 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+#line 1192 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
     break;
 
   case 43:
 #line 181 "semantic/parser.y"
                     { yylhs.value.as < Arguments* > () = yystack_[0].value.as < Arguments* > (); }
-#line 1198 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+#line 1198 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
     break;
 
   case 44:
 #line 183 "semantic/parser.y"
                     { yylhs.value.as < Arguments* > () = new Arguments(); yylhs.value.as < Arguments* > ()->Add(yystack_[0].value.as < Expression* > ()); }
-#line 1204 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+#line 1204 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
     break;
 
   case 45:
 #line 184 "semantic/parser.y"
                              { yystack_[2].value.as < Arguments* > ()->Add(yystack_[0].value.as < Expression* > ()); yylhs.value.as < Arguments* > () = yystack_[2].value.as < Arguments* > (); }
-#line 1210 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+#line 1210 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
     break;
 
   case 46:
 #line 186 "semantic/parser.y"
                                           { yylhs.value.as < Expression* > () = new ThisField(yystack_[0].value.as < std::string > ()); }
-#line 1216 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+#line 1216 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
     break;
 
   case 47:
 #line 187 "semantic/parser.y"
                                            { yylhs.value.as < Expression* > () = new IndexOf(new ThisField(yystack_[3].value.as < std::string > ()), yystack_[1].value.as < Expression* > ()); }
-#line 1222 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+#line 1222 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
     break;
 
   case 48:
 #line 189 "semantic/parser.y"
                      { yylhs.value.as < Expression* > () = new ByName(yystack_[0].value.as < std::string > ()); }
-#line 1228 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+#line 1228 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
     break;
 
   case 49:
 #line 190 "semantic/parser.y"
                                 { yylhs.value.as < Expression* > () = new IndexOf(new ByName(yystack_[3].value.as < std::string > ()), yystack_[1].value.as < Expression* > ()); }
-#line 1234 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+#line 1234 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
     break;
 
   case 50:
 #line 191 "semantic/parser.y"
                        { yylhs.value.as < Expression* > () = yystack_[0].value.as < Expression* > (); }
-#line 1240 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+#line 1240 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
     break;
 
   case 51:
 #line 194 "semantic/parser.y"
                { yylhs.value.as < Expression* > () = new Negativ(yystack_[0].value.as < Expression* > ()); }
-#line 1246 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+#line 1246 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
     break;
 
   case 52:
 #line 195 "semantic/parser.y"
                      { yylhs.value.as < Expression* > () = new And(yystack_[2].value.as < Expression* > (), yystack_[0].value.as < Expression* > ()); }
-#line 1252 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+#line 1252 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
     break;
 
   case 53:
 #line 196 "semantic/parser.y"
                      { yylhs.value.as < Expression* > () = new Or(yystack_[2].value.as < Expression* > (), yystack_[0].value.as < Expression* > ()); }
-#line 1258 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+#line 1258 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
     break;
 
   case 54:
 #line 197 "semantic/parser.y"
                     { yylhs.value.as < Expression* > () = new Less(yystack_[2].value.as < Expression* > (), yystack_[0].value.as < Expression* > ()); }
-#line 1264 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+#line 1264 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
     break;
 
   case 55:
 #line 198 "semantic/parser.y"
                     { yylhs.value.as < Expression* > () = new More(yystack_[2].value.as < Expression* > (), yystack_[0].value.as < Expression* > ()); }
-#line 1270 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+#line 1270 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
     break;
 
   case 56:
 #line 199 "semantic/parser.y"
                      { yylhs.value.as < Expression* > () = new Equel(yystack_[2].value.as < Expression* > (), yystack_[0].value.as < Expression* > ()); }
-#line 1276 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+#line 1276 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
     break;
 
   case 57:
 #line 200 "semantic/parser.y"
                     { yylhs.value.as < Expression* > () = new Add(yystack_[2].value.as < Expression* > (), yystack_[0].value.as < Expression* > ()); }
-#line 1282 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+#line 1282 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
     break;
 
   case 58:
 #line 201 "semantic/parser.y"
                     { yylhs.value.as < Expression* > () = new Sub(yystack_[2].value.as < Expression* > (), yystack_[0].value.as < Expression* > ()); }
-#line 1288 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+#line 1288 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
     break;
 
   case 59:
 #line 202 "semantic/parser.y"
                     { yylhs.value.as < Expression* > () = new Mull(yystack_[2].value.as < Expression* > (), yystack_[0].value.as < Expression* > ()); }
-#line 1294 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+#line 1294 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
     break;
 
   case 60:
 #line 203 "semantic/parser.y"
                     { yylhs.value.as < Expression* > () = new Div(yystack_[2].value.as < Expression* > (), yystack_[0].value.as < Expression* > ()); }
-#line 1300 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+#line 1300 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
     break;
 
   case 61:
 #line 204 "semantic/parser.y"
                     { yylhs.value.as < Expression* > () = new Mod(yystack_[2].value.as < Expression* > (), yystack_[0].value.as < Expression* > ()); }
-#line 1306 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+#line 1306 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
     break;
 
   case 62:
 #line 205 "semantic/parser.y"
                         { yylhs.value.as < Expression* > () = new IndexOf(yystack_[3].value.as < Expression* > (), yystack_[1].value.as < Expression* > ()); }
-#line 1312 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+#line 1312 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
     break;
 
   case 63:
 #line 206 "semantic/parser.y"
-                                     { yylhs.value.as < Expression* > () = new Alloc(new ArrayType(yystack_[3].value.as < std::string > ()), yystack_[1].value.as < Expression* > ()); }
-#line 1318 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+                        { yylhs.value.as < Expression* > () = new LengthOf(yystack_[2].value.as < Expression* > ()); }
+#line 1318 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
     break;
 
   case 64:
 #line 207 "semantic/parser.y"
-                                { yylhs.value.as < Expression* > () = new Alloc(new SimpleType(yystack_[2].value.as < std::string > ())); }
-#line 1324 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+                                     { yylhs.value.as < Expression* > () = new Alloc(new ArrayType(yystack_[3].value.as < std::string > ()), yystack_[1].value.as < Expression* > ()); }
+#line 1324 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
     break;
 
   case 65:
 #line 208 "semantic/parser.y"
-               { yylhs.value.as < Expression* > () = new Not(yystack_[0].value.as < Expression* > ()); }
-#line 1330 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+                                { yylhs.value.as < Expression* > () = new Alloc(new SimpleType(yystack_[2].value.as < std::string > ())); }
+#line 1330 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
     break;
 
   case 66:
 #line 209 "semantic/parser.y"
-                   { yylhs.value.as < Expression* > () = yystack_[1].value.as < Expression* > (); }
-#line 1336 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+               { yylhs.value.as < Expression* > () = new Not(yystack_[0].value.as < Expression* > ()); }
+#line 1336 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
     break;
 
   case 67:
 #line 210 "semantic/parser.y"
-                   { yylhs.value.as < Expression* > () = new ByName(yystack_[0].value.as < std::string > ()); }
-#line 1342 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+                   { yylhs.value.as < Expression* > () = yystack_[1].value.as < Expression* > (); }
+#line 1342 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
     break;
 
   case 68:
 #line 211 "semantic/parser.y"
-               { yylhs.value.as < Expression* > () = new Number(yystack_[0].value.as < int > ()); }
-#line 1348 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+                   { yylhs.value.as < Expression* > () = new ByName(yystack_[0].value.as < std::string > ()); }
+#line 1348 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
     break;
 
   case 69:
 #line 212 "semantic/parser.y"
-             { yylhs.value.as < Expression* > () = new This(); }
-#line 1354 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+               { yylhs.value.as < Expression* > () = new Number(yystack_[0].value.as < int > ()); }
+#line 1354 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
     break;
 
   case 70:
 #line 213 "semantic/parser.y"
-             { yylhs.value.as < Expression* > () = new Bool(yystack_[0].value.as < bool > ()); }
-#line 1360 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+             { yylhs.value.as < Expression* > () = new This(); }
+#line 1360 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
     break;
 
   case 71:
 #line 214 "semantic/parser.y"
-                        { yylhs.value.as < Expression* > () = yystack_[0].value.as < Expression* > (); }
-#line 1366 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+             { yylhs.value.as < Expression* > () = new Bool(yystack_[0].value.as < bool > ()); }
+#line 1366 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
     break;
 
   case 72:
 #line 215 "semantic/parser.y"
-                       { yylhs.value.as < Expression* > () = yystack_[0].value.as < Expression* > (); }
-#line 1372 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+                        { yylhs.value.as < Expression* > () = yystack_[0].value.as < Expression* > (); }
+#line 1372 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
     break;
 
   case 73:
 #line 216 "semantic/parser.y"
-                        { yylhs.value.as < Expression* > () = new LengthOf(yystack_[2].value.as < Expression* > ()); }
-#line 1378 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+                       { yylhs.value.as < Expression* > () = yystack_[0].value.as < Expression* > (); }
+#line 1378 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
     break;
 
 
-#line 1382 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+#line 1382 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
 
             default:
               break;
@@ -1683,16 +1683,16 @@ namespace yy {
        0,     0,     6,    24,    25,    26,     0,    27,    23,    22,
        0,    11,    12,    10,     0,     0,     0,     0,    15,     0,
       28,    13,     0,    17,     0,     0,     0,    15,     0,     0,
-      69,     0,     0,     0,     0,     0,    70,    68,    67,     0,
-      72,    71,     0,    30,    16,    39,     0,    19,    18,     0,
-      67,    72,    71,    51,    65,     0,     0,     5,     0,     0,
+      70,     0,     0,     0,     0,     0,    71,    69,    68,     0,
+      73,    72,     0,    30,    16,    39,     0,    19,    18,     0,
+      68,    73,    72,    51,    66,     0,     0,     5,     0,     0,
        0,     0,     0,     0,     0,     0,     0,    38,     0,     0,
        0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
-      21,     0,     0,    66,    31,     0,     0,    46,     0,    37,
+      21,     0,     0,    67,    31,     0,     0,    46,     0,    37,
        0,     0,     0,     0,     0,    58,    57,    59,    60,    61,
-      54,    55,    56,    52,    53,     0,     0,    73,    20,    15,
-      64,     0,    42,     0,     0,     0,     0,     0,    49,    36,
-      62,    42,     0,    63,    44,    43,     0,     0,    29,    35,
+      54,    55,    56,    52,    53,     0,     0,    63,    20,    15,
+      65,     0,    42,     0,     0,     0,     0,     0,    49,    36,
+      62,    42,     0,    64,    44,    43,     0,     0,    29,    35,
       32,    34,     0,    14,     0,    41,    47,     0,    40,    45,
       33
   };
@@ -1861,8 +1861,8 @@ namespace yy {
        1,     3,     5,     7,     5,     5,     4,     3,     2,     1,
        6,     6,     0,     1,     1,     3,     3,     6,     1,     4,
        1,     2,     3,     3,     3,     3,     3,     3,     3,     3,
-       3,     3,     4,     5,     4,     2,     3,     1,     1,     1,
-       1,     1,     1,     3
+       3,     3,     4,     3,     5,     4,     2,     3,     1,     1,
+       1,     1,     1,     1
   };
 
 
@@ -1933,7 +1933,7 @@ namespace yy {
 
 
 } // yy
-#line 1937 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+#line 1937 "/home/ekaterina/Documents/test/compiler/Source/semantic/parser.cpp"
 
 #line 218 "semantic/parser.y"
 
