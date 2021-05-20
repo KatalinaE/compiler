@@ -1,0 +1,40 @@
+Program:
+	Class Fac 
+		Method: int ComputeFac(
+			int num,
+		)
+			Statments is: 
+				Assert is:
+					More is: 
+						Symbol num
+						Negativ: 
+							Number: 1
+				LocalVariable: int num_aux
+				Move: 
+					Symbol num_aux
+					Number: 1
+				While: 
+					More is: 
+						Symbol num
+						Number: 1
+					Statments is: 
+						Move: 
+							Symbol num_aux
+							Mull is: 
+								Symbol num_aux
+								Symbol num
+						Move: 
+							Symbol num
+							Sub is: 
+								Symbol num
+								Number: 1
+				Return: 
+					Symbol num_aux
+	Class Factorial 
+		Method: void main()
+			Statments is: 
+				Println: 
+					InvocationOf: ComputeFac
+						Alloc: Fac
+						Arguments: 
+							Number: 10
