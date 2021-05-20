@@ -7,15 +7,16 @@
 #include "Statments.h"
 
 class Method: public Declaration {
-  private:
+  public:
     std::string _name;
     Type * _type;
     Formals * _formals;
     Statments * _statments;
-  public:
+
     Method(std::string name,
         Type * type,
         Formals * formals,
         Statments * statments
     );
+    virtual void Accept(Visitor* visitor) override;
 };

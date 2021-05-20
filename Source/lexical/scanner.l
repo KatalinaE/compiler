@@ -28,6 +28,7 @@
 id    [a-zA-Z_][a-zA-Z_0-9]*
 int   [0-9]+
 blank [ \t\r]
+comment "/*"
 
 %{
   // Code run each time a pattern is matched.
@@ -43,8 +44,8 @@ blank [ \t\r]
 
 {blank}+   loc.step();
 \n+        loc.lines(yyleng); loc.step();
-\/\*[a-zA-Z,.; !?0-9#\(\)\r\t\n]*\*\/ ;
-\/\/[a-zA-Z,.; !?0-9#\(\)\r\t]* ;
+"/*"([^*/]|[^*]"/"|"*"[^/])*"*"*"*/" ;
+"//"[^\n] ;
 
 "="        return yy::parser::make_ASSIGN(loc);
 "-"        return yy::parser::make_MINUS(loc);

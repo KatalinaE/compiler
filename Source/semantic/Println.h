@@ -4,8 +4,7 @@
 #include "Expression.h"
 
 class Println: public Statment {
-  private:
-    Expression * _expr;
   public:
+    Expression * _expr;
     Println(Expression * expr);
 };

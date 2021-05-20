@@ -4,9 +4,8 @@
 #include "Statment.h"
 
 class While: public Statment {
-  private:
+  public:
     Expression * _cond;
     Statment * _then;
-  public:
     While(Expression * cond, Statment * then);
 };

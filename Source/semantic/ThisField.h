@@ -4,8 +4,7 @@
 #include "Expression.h"
 
 class ThisField: public Expression {
-  private:
-    std::string _name;
   public:
+    std::string _name;
     ThisField(std::string name);
 };

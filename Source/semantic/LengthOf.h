@@ -3,8 +3,7 @@
 #include "Expression.h"
 
 class LengthOf: public Expression {
-  private:
-    Expression * _expr;
   public:
+    Expression * _expr;
     LengthOf(Expression * expr);
 };

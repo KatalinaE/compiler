@@ -1312,57 +1312,115 @@ namespace yy {
     break;
 
   case 63:
+<<<<<<< Updated upstream
 #line 210 "semantic/parser.y"
                                 { yylhs.value.as < Expression* > () = new Alloc(new SimpleType(yystack_[2].value.as < std::string > ())); }
+=======
+#line 206 "semantic/parser.y"
+                                     { yylhs.value.as < Expression* > () = new Alloc(new ArrayType(yystack_[3].value.as < std::string > ()), yystack_[1].value.as < Expression* > ()); }
+>>>>>>> Stashed changes
 #line 1318 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
     break;
 
   case 64:
+<<<<<<< Updated upstream
 #line 211 "semantic/parser.y"
                { yylhs.value.as < Expression* > () = new Not(yystack_[0].value.as < Expression* > ()); }
+=======
+#line 207 "semantic/parser.y"
+                                { yylhs.value.as < Expression* > () = new Alloc(new SimpleType(yystack_[2].value.as < std::string > ())); }
+>>>>>>> Stashed changes
 #line 1324 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
     break;
 
   case 65:
+<<<<<<< Updated upstream
 #line 212 "semantic/parser.y"
                    { yylhs.value.as < Expression* > () = yystack_[1].value.as < Expression* > (); }
+=======
+#line 208 "semantic/parser.y"
+               { yylhs.value.as < Expression* > () = new Not(yystack_[0].value.as < Expression* > ()); }
+>>>>>>> Stashed changes
 #line 1330 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
     break;
 
   case 66:
+<<<<<<< Updated upstream
 #line 213 "semantic/parser.y"
                    { yylhs.value.as < Expression* > () = new ByName(yystack_[0].value.as < std::string > ());   }
+=======
+#line 209 "semantic/parser.y"
+                   { yylhs.value.as < Expression* > () = yystack_[1].value.as < Expression* > (); }
+>>>>>>> Stashed changes
 #line 1336 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
     break;
 
   case 67:
+<<<<<<< Updated upstream
 #line 214 "semantic/parser.y"
                { yylhs.value.as < Expression* > () = new Number(yystack_[0].value.as < int > ()); }
+=======
+#line 210 "semantic/parser.y"
+                   { yylhs.value.as < Expression* > () = new ByName(yystack_[0].value.as < std::string > ()); }
+>>>>>>> Stashed changes
 #line 1342 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
     break;
 
   case 68:
+<<<<<<< Updated upstream
 #line 215 "semantic/parser.y"
              { yylhs.value.as < Expression* > () = new This(); }
+=======
+#line 211 "semantic/parser.y"
+               { yylhs.value.as < Expression* > () = new Number(yystack_[0].value.as < int > ()); }
+>>>>>>> Stashed changes
 #line 1348 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
     break;
 
   case 69:
+<<<<<<< Updated upstream
 #line 216 "semantic/parser.y"
              { yylhs.value.as < Expression* > () = new Bool(yystack_[0].value.as < bool > ()); }
+=======
+#line 212 "semantic/parser.y"
+             { yylhs.value.as < Expression* > () = new This(); }
+>>>>>>> Stashed changes
 #line 1354 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
     break;
 
   case 70:
+<<<<<<< Updated upstream
 #line 217 "semantic/parser.y"
                         { yylhs.value.as < Expression* > () = yystack_[0].value.as < Expression* > (); }
+=======
+#line 213 "semantic/parser.y"
+             { yylhs.value.as < Expression* > () = new Bool(yystack_[0].value.as < bool > ()); }
+>>>>>>> Stashed changes
 #line 1360 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
     break;
 
   case 71:
+<<<<<<< Updated upstream
 #line 218 "semantic/parser.y"
                        { yylhs.value.as < Expression* > () = yystack_[0].value.as < Expression* > (); }
 #line 1366 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+=======
+#line 214 "semantic/parser.y"
+                        { yylhs.value.as < Expression* > () = yystack_[0].value.as < Expression* > (); }
+#line 1366 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+    break;
+
+  case 72:
+#line 215 "semantic/parser.y"
+                       { yylhs.value.as < Expression* > () = yystack_[0].value.as < Expression* > (); }
+#line 1372 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+    break;
+
+  case 73:
+#line 216 "semantic/parser.y"
+                        { yylhs.value.as < Expression* > () = new LengthOf(yystack_[2].value.as < Expression* > ()); }
+#line 1378 "/media/ttcux/Data/Программирование/Проекты/Compiler/Mini-Java/Source/semantic/parser.cpp"
+>>>>>>> Stashed changes
     break;
 
 
@@ -1665,6 +1723,7 @@ namespace yy {
   const signed char
   parser::yydefact_[] =
   {
+<<<<<<< Updated upstream
        0,     0,     3,     0,     0,     2,     1,     0,     0,     4,
        0,     7,     0,     0,     0,     0,     8,     9,     0,     0,
        0,     6,    24,    25,    26,     0,    27,    23,    22,     0,
@@ -1681,6 +1740,25 @@ namespace yy {
        0,     0,     0,     0,    48,    36,    60,    41,     0,    62,
        0,    29,    35,    32,    34,    43,    42,     0,    14,    46,
        0,     0,    40,    33,    44
+=======
+       0,     0,     3,     0,     0,     0,     1,     0,     2,     0,
+       4,     0,     7,     0,     0,     0,     0,     8,     9,     0,
+       0,     0,     6,    24,    25,    26,     0,    27,    23,    22,
+       0,    11,    12,    10,     0,     0,     0,     0,    15,     0,
+      28,    13,     0,    17,     0,     0,     0,    15,     0,     0,
+      69,     0,     0,     0,     0,     0,    70,    68,    67,     0,
+      72,    71,     0,    30,    16,    39,     0,    19,    18,     0,
+      67,    72,    71,    51,    65,     0,     0,     5,     0,     0,
+       0,     0,     0,     0,     0,     0,     0,    38,     0,     0,
+       0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+      21,     0,     0,    66,    31,     0,     0,    46,     0,    37,
+       0,     0,     0,     0,     0,    58,    57,    59,    60,    61,
+      54,    55,    56,    52,    53,     0,     0,    73,    20,    15,
+      64,     0,    42,     0,     0,     0,     0,     0,    49,    36,
+      62,    42,     0,    63,    44,    43,     0,     0,    29,    35,
+      32,    34,     0,    14,     0,    41,    47,     0,    40,    45,
+      33
+>>>>>>> Stashed changes
   };
 
   const signed char
@@ -1842,10 +1920,17 @@ namespace yy {
        2,     1,     1,     3,     9,     0,     2,     0,     1,     1,
        3,     2,     1,     1,     1,     1,     1,     1,     3,     5,
        1,     3,     5,     7,     5,     5,     4,     3,     2,     1,
+<<<<<<< Updated upstream
        6,     0,     1,     1,     3,     3,     6,     1,     4,     1,
        3,     3,     3,     3,     3,     3,     3,     3,     3,     3,
        4,     3,     5,     4,     2,     3,     1,     1,     1,     1,
        1,     1
+=======
+       6,     6,     0,     1,     1,     3,     3,     6,     1,     4,
+       1,     2,     3,     3,     3,     3,     3,     3,     3,     3,
+       3,     3,     4,     5,     4,     2,     3,     1,     1,     1,
+       1,     1,     1,     3
+>>>>>>> Stashed changes
   };
 
 

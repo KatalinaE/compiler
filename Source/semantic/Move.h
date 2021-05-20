@@ -4,8 +4,7 @@
 #include "Statment.h"
 
 class Move: public Statment {
-  private:
-    Expression * _dst, * _src;
   public:
+    Expression * _dst, * _src;
     Move(Expression * dst, Expression * src);
 };

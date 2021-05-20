@@ -5,11 +5,10 @@
 #include "Arguments.h"
 
 class InvocationOf: public Expression {
-  private:
+  public:
     Expression * _expr;
     std::string _name;
     Arguments * _args;
-  public:
     InvocationOf(
         Expression * expr,
         std::string name,

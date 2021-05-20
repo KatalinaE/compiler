@@ -3,8 +3,7 @@
 #include "Expression.h"
 
 class IndexOf: public Expression {
-  private:
-    Expression * _obj, * _index;
   public:
+    Expression * _obj, * _index;
     IndexOf(Expression * obj, Expression * index);
 };

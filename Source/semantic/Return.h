@@ -4,8 +4,7 @@
 #include "Statment.h"
 
 class Return: public Statment {
-  private:
-    Expression * _expr;
   public:
+    Expression * _expr;
     Return(Expression * expr);
 };

@@ -1,6 +1,7 @@
 #include "driver.h"
 #include "semantic/parser.hh"
-
+#include "visitors/PrintVisitor.h"
+#include "visitors/Interpretator.h"
 
 
 Driver::Driver() :
@@ -17,8 +18,15 @@ int Driver::parse(const std::string& f) {
     parser.set_debug_level(trace_parsing);
     int res = parser();
 
-    std::cout << program << std::endl;
+    std::cout << "<Program " << program << ">" << std::endl;
+    if (program) {
+      Interpretator in;
+      program->Accept(&in);
 
+      PrintVisitor pv(f + ".tree");
+      program->Accept(&pv);
+    }
+    
     scan_end();
     return res;
 }

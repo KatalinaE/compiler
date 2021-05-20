@@ -4,14 +4,14 @@
 #include "Declarations.h"
 #include "Extends.h"
 
-class Class {
-  private:
+class Class: public Base {
+  public:
     std::string _name;
     Extends * _extends;
     Declarations * _declarations;
-  public:
     Class(std::string name,
         Extends * extends,
         Declarations * declarations
     );
+	virtual void Accept(Visitor*) override;
 };

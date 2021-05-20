@@ -3,8 +3,7 @@
 #include "Expression.h"
 
 class Negativ: public Expression {
-  private:
-    Expression * _expr;
   public:
+    Expression * _expr;
     Negativ(Expression * expr);
 };

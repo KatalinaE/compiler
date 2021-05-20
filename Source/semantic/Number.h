@@ -3,8 +3,11 @@
 #include "Expression.h"
 
 class Number: public Expression {
-  private:
-    int _value;
   public:
+    int _value;
     Number(int value);
+<<<<<<< Updated upstream
+=======
+    virtual void Accept(Visitor* visitor) override;
+>>>>>>> Stashed changes
 };

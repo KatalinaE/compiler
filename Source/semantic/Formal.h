@@ -9,4 +9,5 @@ class Formal {
     std::string _name;
   public:
     Formal(Type * type, std::string name);
+    std::string toString();
 };

@@ -4,8 +4,7 @@
 #include "Expression.h"
 
 class Assert: public Statment {
-  private:
-    Expression * _expr;
   public:
+    Expression * _expr;
     Assert(Expression * expr);
 };

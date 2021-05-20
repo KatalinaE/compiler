@@ -4,8 +4,7 @@
 #include <string>
 
 class ByName: public Expression {
-  private:
-    std::string _name;
   public:
+    std::string _name;
     ByName(std::string name);
 };

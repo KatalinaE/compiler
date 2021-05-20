@@ -4,8 +4,7 @@
 #include "Declaration.h"
 
 class LocalVariable: public Statment {
-  private:
-    Declaration * _var;
   public:
+    Declaration * _var;
     LocalVariable(Declaration * var); 
 };

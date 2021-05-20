@@ -3,8 +3,7 @@
 #include "Expression.h"
 
 class Not: public Expression {
-  private:
-    Expression * _expr;
   public:
+    Expression * _expr;
     Not(Expression * expr);
 };

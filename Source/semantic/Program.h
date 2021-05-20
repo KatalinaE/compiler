@@ -2,7 +2,7 @@
 
 #include "Classes.h"
 
-class Program {
+class Program: public Base {
   public:
     Program(Classes * classes, Class* main);
   private:

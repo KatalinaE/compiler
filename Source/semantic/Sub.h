@@ -3,8 +3,7 @@
 #include "Expression.h"
 
 class Sub: public Expression {
-  private:
-    Expression * first, * second;
   public:
+    Expression * first, * second;
     Sub(Expression * first, Expression * second);
 };

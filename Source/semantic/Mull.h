@@ -3,8 +3,7 @@
 #include "Expression.h"
 
 class Mull: public Expression {
-  private:
-    Expression * first, * second;
   public:
+    Expression * first, * second;
     Mull(Expression * first, Expression * second);
 };

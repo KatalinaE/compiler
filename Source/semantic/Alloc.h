@@ -4,9 +4,8 @@
 #include "Type.h"
 
 class Alloc: public Expression {
-  private:
+  public:
     Type * _type;
     Expression * _size;
-  public:
     Alloc(Type * type, Expression * size = 0);
 };

@@ -10,4 +10,9 @@ class Variable: public Declaration {
     std::string _name;
   public:
     Variable(Type * type, std::string name);
+<<<<<<< Updated upstream
+=======
+    std::string toString();
+    virtual void Accept(Visitor* visitor) override;
+>>>>>>> Stashed changes
 };

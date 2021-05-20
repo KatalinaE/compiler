@@ -3,8 +3,7 @@
 #include "Expression.h"
 
 class Equel: public Expression {
-  private:
-    Expression * first, * second;
   public:
+    Expression * first, * second;
     Equel(Expression * first, Expression * second);
 };

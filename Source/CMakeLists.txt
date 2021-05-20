@@ -56,12 +56,20 @@ add_executable(
     semantic/Println.cpp
     semantic/Return.cpp
     semantic/SimpleType.cpp
+    semantic/Statments.cpp
     semantic/Sub.cpp
+    semantic/This.cpp
     semantic/ThisField.cpp
     semantic/Variable.cpp
     semantic/While.cpp
     semantic/Negativ.cpp
     semantic/Program.cpp
+    visitors/PrintVisitor.cpp
+    visitors/Interpretator.cpp
+    Objects/Object.cpp
+    Objects/Int.cpp
+    Objects/Bool.cpp
+    Objects/Array.cpp
 )
 
 target_include_directories(

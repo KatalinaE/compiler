@@ -3,8 +3,7 @@
 #include "Expression.h"
 
 class Less: public Expression {
-  private:
-    Expression * first, * second;
   public:
+    Expression * first, * second;
     Less(Expression * first, Expression * second);
 };

@@ -3,8 +3,7 @@
 #include "Expression.h"
 
 class Div: public Expression {
-  private:
-    Expression * first, * second;
   public:
+    Expression * first, * second;
     Div(Expression * first, Expression * second);
 };

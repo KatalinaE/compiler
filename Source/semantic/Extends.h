@@ -3,8 +3,8 @@
 #include <string>
 
 class Extends {
-  private:
-    std::string _name;
   public:
+    std::string _name;
     Extends(std::string name = "");
+    std::string toString();
 };
