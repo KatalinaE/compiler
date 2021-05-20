@@ -14,4 +14,5 @@ class InvocationOf: public Expression {
         std::string name,
         Arguments * args
     );
+    virtual void Accept(Visitor* visitor);
 };

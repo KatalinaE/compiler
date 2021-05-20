@@ -1,6 +1,7 @@
 #pragma once
+#include "Base.h"
 
-class Statment {
+class Statment: public Base {
   public:
     virtual ~Statment() {};
 };

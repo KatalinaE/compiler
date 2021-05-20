@@ -7,4 +7,5 @@ class Println: public Statment {
   public:
     Expression * _expr;
     Println(Expression * expr);
+    virtual void Accept(Visitor* visitor);
 };

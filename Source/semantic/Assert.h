@@ -7,4 +7,5 @@ class Assert: public Statment {
   public:
     Expression * _expr;
     Assert(Expression * expr);
+    virtual void Accept(Visitor* visitor);
 };

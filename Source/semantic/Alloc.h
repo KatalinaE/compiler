@@ -8,4 +8,5 @@ class Alloc: public Expression {
     Type * _type;
     Expression * _size;
     Alloc(Type * type, Expression * size = 0);
+    virtual void Accept(Visitor* visitor);
 };

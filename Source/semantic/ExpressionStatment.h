@@ -7,4 +7,5 @@ class ExpressionStatment: public Statment {
   public:
     Expression * _expr;
     ExpressionStatment(Expression * expr);
+    virtual void Accept(Visitor* visitor);
 };

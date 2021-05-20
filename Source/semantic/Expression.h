@@ -1,6 +1,7 @@
 #pragma once
+#include "Base.h"
 
-class Expression {
+class Expression: public Base {
     public:
         virtual ~Expression() {};
 };

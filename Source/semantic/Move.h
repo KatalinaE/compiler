@@ -7,4 +7,5 @@ class Move: public Statment {
   public:
     Expression * _dst, * _src;
     Move(Expression * dst, Expression * src);
+    virtual void Accept(Visitor* visitor);
 };

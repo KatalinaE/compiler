@@ -114,7 +114,7 @@
 %%
 %start program;
 
-program: main_class class_declarations { $2->Add($1); $$ = new Program($2, $1); driver.program = $$; }
+program: main_class class_declarations END { $2->Add($1); $$ = new Program($2, $1); driver.program = $$; }
 
 class_declarations: %empty { $$ = new Classes(); }
     | class_declarations class_declaration { $1->Add($2); $$ = $1; }
@@ -175,6 +175,7 @@ statment: "assert" "(" expr ")" ";" { $$ = new Assert($3); }
 local_var_declaration: var_declaration { $$ = new LocalVariable($1); }
 
 method_invocation: expr "." "identifier" "(" arguments ")" { $$ = new InvocationOf($1, $3, $5); }
+    | "this" "." "identifier" "(" arguments ")" { $$ = new InvocationOf(new This(), $3, $5); }
 
 arguments: %empty { $$ = new Arguments(); }
     | arguments_any { $$ = $1; }
@@ -189,10 +190,6 @@ lvalue: "identifier" { $$ = new ByName($1); }
     | "identifier" "[" expr "]" { $$ = new IndexOf(new ByName($1), $3); }
     | field_invocation { $$ = $1; }
 
-%left "&&" "||";
-%left "<" ">" "==";
-%left "+" "-";
-%left "*" "/" "%";
 
 expr: "-" expr { $$ = new Negativ($2); }
     | expr "&&" expr { $$ = new And($1, $3); }
@@ -211,7 +208,7 @@ expr: "-" expr { $$ = new Negativ($2); }
     | "new" simple_type "(" ")" { $$ = new Alloc(new SimpleType($2)); }
     | "!" expr { $$ = new Not($2); }
     | "(" expr ")" { $$ = $2; }
-    | "identifier" { $$ = new ByName($1);   }
+    | "identifier" { $$ = new ByName($1); }
     | "number" { $$ = new Number($1); }
     | "this" { $$ = new This(); }
     | "bool" { $$ = new Bool($1); }

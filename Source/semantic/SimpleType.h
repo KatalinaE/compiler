@@ -4,8 +4,8 @@
 #include "Type.h"
 
 class SimpleType: public Type {
-  private:
-    std::string _name;
   public:
+    std::string _name;
     SimpleType(std::string name);
+    virtual std::string toString() override;
 };

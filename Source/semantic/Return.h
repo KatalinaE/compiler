@@ -7,4 +7,5 @@ class Return: public Statment {
   public:
     Expression * _expr;
     Return(Expression * expr);
+    virtual void Accept(Visitor* visitor);
 };
